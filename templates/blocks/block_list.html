@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+
+{% block title %}blocks{% endblock title %}
+
+{% block content %}
+<h1>BLOCK EXPLORER CROWN</h1>
+  {% for block in block_list %}
+    <div>
+      <h2><a href="{{ block.get_absolute_url }}">{{ block.hash_block }}</a></h2>
+      <p>Height: {{ block.height }}</p>
+      <p>Number txs: {{ block.number_txs }}</p>
+    </div>
+  {% endfor %}
+{% endblock content %}

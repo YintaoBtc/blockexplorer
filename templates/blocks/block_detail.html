@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+
+{% block title %}{{ block.hash_block }}{% endblock title %}
+
+{% block content %}
+<div class="block-detail">
+  <h2><a href="">{{ block.hash_block }}o</a></h2>
+  <p>Confirmations: {{ block.confirmations }}</p>
+  <p>Height: {{ block.height }}</p>
+  <p>weight: {{ block.weight }}</p>
+  <p>Number txs: {{ block.number_txs }}</p>
+</div>
+{% endblock content %}
