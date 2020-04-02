@@ -11,5 +11,5 @@ class BlockListView(ListView):
 
 class BlockDetailView(DetailView): 
     model = Block
-    context_object_name = 'block'
+    context_object_name = 'block_obj'
     template_name = 'blocks/block_detail.html'
