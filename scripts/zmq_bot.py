@@ -13,9 +13,8 @@ try:
     cursor = connection.cursor()
 
 
-
-    postgres_insert_query = """ INSERT INTO blocks_block (ID, hash_block, confirmations, number_txs) VALUES (%s,%s,%s)"""
-    record_to_insert = (guid,"kinadsajkbreasdsajda321893u21932ndka", '5', "950")
+    postgres_insert_query = """ INSERT INTO block (ID, hash_block, confirmations, datetime, height, number_txs, difficulty, bits, weight, nonce) VALUES (%s,%s,%s)"""
+    record_to_insert = (str(guid),"kinadsajkbreasdsajda321893u21932ndka", '5', "950", "680876", "1345", "12312321321312213", "56", "123213adwqdwq", "00000000001321321")
     print(record_to_insert)
     cursor.execute(postgres_insert_query, record_to_insert)
 
