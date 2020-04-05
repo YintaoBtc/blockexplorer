@@ -1,0 +1,21 @@
+# Commands
+docker-compose up -d --build
+docker-compose exec web python manage.py makemigrations
+docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py createsuperuser
+
+# Containers
+Creating network "yintao_central_default" with the default driver
+Creating network "yintao_central_bitcoin" with the default driver
+Creating yintao_central_db_1            ... done
+Creating yintao_central_bitcoind_1      ... done
+Creating yintao_central_reverse-proxy_1 ... done
+Creating yintao_central_crownd_1        ... done
+Creating yintao_central_monitoring_1    ... done
+Creating yintao_central_python_1        ... done
+Creating yintao_central_whoami_1        ... done
+Creating yintao_central_web_1           ... done
+
+# Webs
+http://127.0.0.1:8000 ----> Web Django
+http://127.0.0.1:8080 ----> Dashboard monitoring
